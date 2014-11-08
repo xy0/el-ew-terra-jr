@@ -86,7 +86,7 @@ function terra_setup(){
 	//remove_filter('wp_list_pages','ter_add_home_link'); //Uncomment to remove home link from sitemap
 }
 
-function ter_admin_favicon(){ echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS . 'favicon.png">'; }
+function ter_admin_favicon(){ echo '<link rel="shortcut icon" href="' . TER_CHILD_ICONS . 'favicon-32x32.png">'; }
 
 function ter_enqueue_parent_theme_styles(){
 	if(is_admin()) return;	
@@ -94,8 +94,7 @@ function ter_enqueue_parent_theme_styles(){
 	wp_enqueue_style('terra',TERRA_CHILD . 'style.css',array('terra_parent'));
 }
 
-//function ter_custom_login_styles(){ wp_enqueue_style('ter_login_css',TER_CHILD_CSS . 'login.css'); } //Uncomment for custom login stylesheet
-
+function ter_custom_login_styles(){ wp_enqueue_style('ter_login_css',TER_CHILD_CSS . 'login.css'); }
 
 /* Child Shortcodes - Uncomment to add custom shortcodes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*
