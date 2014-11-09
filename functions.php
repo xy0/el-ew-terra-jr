@@ -20,7 +20,6 @@ ter_define_constants(array(
 	'TER_CHILD_CSS' => 			$ter_dir . '/css/',
 	'TER_CHILD_CUSTOM_PT' => 	dirname(__FILE__) . '/custom-post-types/',
 	'TER_CHILD_GRAPHICS' => 	$ter_dir . '/graphics/',
-	'TER_CHILD_ICONS' => 		$ter_dir . '/icons/',
 	'TER_CHILD_JS' => 			$ter_dir . '/js/'
 ));
 
@@ -28,6 +27,7 @@ ter_define_constants(array(
 ter_define_constants(array(
 	'TER_ACTIVATE_BACK_TO_TOP' =>	false,             						//Boolean 	= Activate back to top button
 	'TER_ACTIVATE_BRANDING' => 		false,									//Boolean	= Activate Terra's default branding
+	'TER_ACTIVATE_FAVICONS' => 		false,									//Boolean	= Activate Terra's favicon system
 	'TER_ACTIVATE_SLIDER' => 		false,									//Boolean	= Activate Terra's default slider
 	'TER_ACTIVATE_SKROLLR' => 		false,									//Boolean	= Activate Terra's default parallax skrollr
 	'TER_ACTIVATE_WAYPOINTS' => 	false,									//Boolean	= Activate Waypoints JS, needed for CTA Sidebar
@@ -82,8 +82,14 @@ function terra_setup(){
 	//add_theme_support('post-formats',explode(',',TER_POST_FORMATS)); //Uncomment to create post formats
 	//remove_filter('wp_list_pages','ter_add_home_link'); //Uncomment to remove home link from sitemap
 }
+ 
+function ter_head(){
+	if(TER_ACTIVATE_FAVICONS) require('favicon.php');
+	else echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS .'favicon-32x32.png">';
+	//echo '<meta name="format-detection" content="telephone=no">';//This removes IPhone phone formatting - Future Constant?
+}
 
-function ter_admin_favicon(){ echo '<link rel="shortcut icon" href="' . TER_CHILD_ICONS . 'favicon-32x32.png">'; }
+function ter_admin_favicon(){ echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS . 'favicon-32x32.png">'; }
 
 function ter_enqueue_parent_theme_styles(){
 	if(is_admin()) return;	
