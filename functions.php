@@ -1,29 +1,27 @@
-<?php
+<?php /* <~~~~~~~~~~< Child Theme >~~~~~~~~~~> */
 
-/* Securing Terra Jr:
-
+/*
+Securing Terra Jr:
 If your site is behid a load balancer, or reverse proxy you need to secure the wordpress admin area.
 Paste these two lines near the top of wp-config.php
 
 define('FORCE_SSL_ADMIN',true);
 if($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') $_SERVER['HTTPS'] = 'on';
-
 */
 
-/* Define Constants - Do Not Modify */
+/* Define Constants Function - DO NOT MODIFY >~~~~~~~~~~> */
 function ter_define_constants($constants){ foreach($constants as $key => $value) if(!defined($key)) define($key,$value); }
-
-/* Child theme root dir */
-$dir = get_bloginfo('stylesheet_directory');
+$ter_dir = get_bloginfo('stylesheet_directory');//Child theme is always 'stylesheet_directory'
+/* <~~~~~~~~~~< END Define Constants Function */
 
 /* Directory Constants */
 ter_define_constants(array(
-	'TERRA_CHILD' => 			$dir . '/',
-	'TER_CHILD_CSS' => 			$dir . '/css/',
+	'TERRA_CHILD' => 			$ter_dir . '/',
+	'TER_CHILD_CSS' => 			$ter_dir . '/css/',
 	'TER_CHILD_CUSTOM_PT' => 	dirname(__FILE__) . '/custom-post-types/',
-	'TER_CHILD_GRAPHICS' => 	$dir . '/graphics/',
-	'TER_CHILD_ICONS' => 		$dir . '/icons/',
-	'TER_CHILD_JS' => 			$dir . '/js/'
+	'TER_CHILD_GRAPHICS' => 	$ter_dir . '/graphics/',
+	'TER_CHILD_ICONS' => 		$ter_dir . '/icons/',
+	'TER_CHILD_JS' => 			$ter_dir . '/js/'
 ));
 
 /* Theme Option Constants - Change theme settings here */
@@ -46,7 +44,7 @@ ter_define_constants(array(
 	'TER_HEADER_HOME_LINK' =>		'title',								//Options	= 'logo','title','title-desc',''
 	'TER_MAX_IMAGE_SIZE_KB' =>		1024,									//Integer	= This will prevent uploads to media library greater than this value
 	'TER_JQUERY' => 				'1.9.1',								//Value 	= '1.7.2' Which version of jQuery to load from CDN, blank for default WP
-	'TER_LOGO' => 					TER_CHILD_GRAPHICS . 'logo.png',		//URL 		= Location of logo image
+	'TER_LOGO' => 					$ter_dir . '/graphics/logo.png',			//URL 		= Location of logo image
 	'TER_POST_FORMATS' => 			'gallery,image,video',					//CSL 		= Enter a comma separated list of post formats to register
 	'TER_PRIMARY_CLASS' => 			'col-sm-8',         					//CSS 		= Primary container class
 	'TER_SECONDARY' => 				'right',                   	 			//Options 	= 'left','right','none' - Sidebar Layout
@@ -54,7 +52,6 @@ ter_define_constants(array(
 	'TER_SIDEBARS' => 				'Blog Sidebar,Page Sidebar',			//CSL 		= Comma separated list of sidebars - Add ',CTA Sidebar' for CTA Sidebar
 	'TER_SITE_MOVED' => 			false,									//CSL 		= Value, enter a post ID for the site moved page
 	'TER_SSL' => 					false,									//Value		= 'https' or 'http' - Value represents if the site will be mostly secure or not
-	'TER_TEMPLATE_COMMENTS' => 		true,									//Boolean	= Html comments to aid in template location
 	'TER_TITLE_FORMAT' => 			'standard',								//Options 	= 'standard','yoast'. Wordpress SEO plugin needs yoast setting
 ));
 
