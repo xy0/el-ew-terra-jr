@@ -14,6 +14,8 @@ ter_define_constants(array(
 	'TER_CHILD_JS' => 		$ter_dir . '/js/'
 ));
 
+/* Theme Options - See: https://github.com/hyptx/terra/blob/v3.3.0.2/README.md >~~~~~~~> */
+
 ter_define_constants(array(
 	/* System */
 	'TER_ERROR_DISPLAY_ON' => 		false,
