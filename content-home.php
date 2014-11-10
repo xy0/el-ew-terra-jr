@@ -4,12 +4,8 @@
 		<?php the_content() ?>
 		<div class="row">
 			<div class="col-sm-12">
-				<h3>Home.php</h3>
-				<ul>
-					<li>If you want to use a Wordpress page for the home page content, simply select a page from the Wordpress Reading Settings.</li>
-					<li>This hardcoded content displays below the WP Content, simply edit the content-home.php template file.</li>
-					<li>If you want to display your blog posts here, delete home.php</li>
-				</ul>
+				<h3><em>content-home.php</em></h3>
+				<p>This is the <em>content-home-page.php</em> template. This template has hard-coded content below the dynamic content printed by Wordpress. Just remove this HTML if you don't need additional hard-coded HTML. An alternative would be to just create your own home page template with a content template to boot.</p>
 			</div>
 		</div>
 	</div><!-- .entry-content --> 
