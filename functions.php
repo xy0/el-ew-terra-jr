@@ -15,7 +15,6 @@ ter_define_constants(array(
 ));
 
 /* Theme Options - See: https://github.com/hyptx/terra/blob/v3.3.0.4/README.md#theme-config >~~~~~~~> */
-
 ter_define_constants(array(
 	/* System */
 	'TER_ERROR_DISPLAY_ON' => 		false,
@@ -32,12 +31,14 @@ ter_define_constants(array(
 	'TER_SECONDARY' => 				'right',
 	'TER_SIDEBARS' => 				'Blog Sidebar,Page Sidebar',	
 	/* Wordpress */
+	'TER_ADD_HOME_LINK' => 			false,
 	'TER_ADMIN_BAR' => 				'editor',
 	'TER_ADMIN_BAR_LOGIN' => 		false,
 	'TER_EXCERPT' => 				false,
 	'TER_EXCERPT_LEN' => 			40,
 	'TER_TITLE_FORMAT_DEFAULT' => 	false,
-	'TER_MAX_IMAGE_SIZE_KB' => 		1024,	
+	'TER_MAX_IMAGE_SIZE_KB' => 		1024,
+	'TER_WP_POST_FORMATS' => 		false,
 	/* Features */
 	'TER_ACTIVATE_BACK_TO_TOP' => 	false,
 	'TER_ACTIVATE_BRANDING' => 		false,
@@ -51,11 +52,10 @@ ter_define_constants(array(
 ));
 /* END <~~~~~~~< Theme Options */
 
-/* Includes ~~> */
+/* Includes ~~~~> */
 require(TER_CHILD_CUSTOM_PT . 'custom-post-type.php');//Add files to the /custom-post-types/ directory to use for creating subclasses of TerCustomPostType
 
-/* Action & Filter Callbacks >~~~~~~~> */
-
+/* Setup ~~> */
 function terra_setup(){
 	if(TER_ERROR_DISPLAY){ error_reporting(E_ALL ^ E_NOTICE); ini_set('display_errors','1'); }
 	add_theme_support('automatic-feed-links');
@@ -72,47 +72,56 @@ function terra_setup(){
 	remove_action('wp_head','start_post_rel_link',10,0);
 	remove_action('wp_head','parent_post_rel_link',10,0);
 	remove_action('wp_head','adjacent_posts_rel_link',10,0);
-	remove_filter('the_content', 'wptexturize');
-	remove_filter('comment_text', 'wptexturize');
-	remove_filter('the_excerpt', 'wptexturize');
-	remove_filter('wp_list_pages','ter_add_home_link');
-	//add_theme_support('post-formats',explode(',','gallery,image,video')); //Uncomment to create post formats
-	
-}
- 
-function ter_head(){
-	if(TER_ACTIVATE_FAVICONS) require('favicon.php');
-	else echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS .'favicon-32x32.png">';
-	//echo '<meta name="format-detection" content="telephone=no">';//This removes IPhone phone formatting - Future Constant?
+	remove_filter('the_content','wptexturize');
+	remove_filter('comment_text','wptexturize');
+	remove_filter('the_excerpt','wptexturize');
+	if(TER_WP_POST_FORMATS) add_theme_support('post-formats',explode(',',TER_WP_POST_FORMATS));	
 }
 
+/* Admin Favicon ~~> */
 function ter_admin_favicon(){
 	echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS . 'favicon-32x32.png">';
 }
 
+/* Enqueue Parent Theme Styles ~~> */
 function ter_enqueue_parent_theme_styles(){
 	if(is_admin()) return;	
 	wp_enqueue_style('terra_parent',TERRA . 'style.css');
 	wp_enqueue_style('terra',TERRA_CHILD . 'style.css',array('terra_parent'));
+} 
+
+/* Favicons ~~> */
+function ter_favicons(){
+	if(TER_ACTIVATE_FAVICONS) require('favicon.php');
+	else echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS .'favicon-32x32.png">';
 }
 
-function ter_custom_login_styles(){
+/* Login Styles ~~> */
+function ter_login_styles(){
 	wp_enqueue_style('ter_login_css',TER_CHILD_CSS . 'login.css');
 }
 
-/* END <~~~~~~~< Action & Filter Callbacks */
 
-/* Child Shortcodes - Uncomment to add custom shortcodes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Child Shortcode System - Uncomment to add custom shortcodes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*
+
+//Shortcode callback
 function ter_gray_box( $atts, $content = null ){ return '<div class="gray-box">' . do_shortcode($content) . '</div>'; }
 add_shortcode('gray-box','ter_gray_box');
 
-$ter_child_shortcodes_for_filter = array('gray-box');//Apply shortcode filter by adding items to this array
-$ter_child_shortcodes = array('[gray-box]' => 'A gray box with rounded corners');
+//Prevent autop from breaking nested shortcodes by adding it to this array
+$ter_child_shortcodes_for_filter = array('gray-box');
+
 */
 
 /* Child Help - Uncomment to add custom theme help ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*
+
+//Custom Shortcode section
+$ter_child_shortcodes = array('[gray-box]' => 'A gray box with rounded corners');
+
+//Main section
 $ter_child_help = array('Help Section Title' => '<p>This is a paragraph of help text</p>','Help Section Title 2' => '<p>This is a paragraph of help text 2</p>');
+
 */
 ?>
