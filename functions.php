@@ -16,12 +16,13 @@ ter_define_constants(array(
 
 /* Theme Options - See: https://github.com/hyptx/terra/blob/v3.3.0.4/README.md#theme-config >~~~~~~~> */
 ter_define_constants(array(
-	/* System */
+		/* System */
 	'TER_ERROR_DISPLAY_ON' => 		false,
 	'TER_CDN_URL' => 				'//cdnjs.cloudflare.com/ajax/libs/',
 	'TER_JQUERY_VERSION' => 		'1.9.1',
-	'TER_BOOTSTRAP_VERSION' => 		'3.3.0',	
-	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',	
+	'TER_BOOTSTRAP_VERSION' => 		'3.3.0',
+	'TER_BS_IMG_RESPONSIVE' => 		'#article img,.widget img',
+	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',
 	/* Layout */
 	'TER_LOGO' => 					$ter_dir . '/graphics/logo.png',
 	'TER_HEADER_HOME_LINK' => 		'title',
@@ -29,7 +30,7 @@ ter_define_constants(array(
 	'TER_PRIMARY_CLASS' => 			'col-sm-8',
 	'TER_SECONDARY_CLASS' => 		'col-sm-4',
 	'TER_SECONDARY' => 				'right',
-	'TER_SIDEBARS' => 				'Blog Sidebar,Page Sidebar',	
+	'TER_SIDEBARS' => 				'Blog Sidebar,Page Sidebar',
 	/* Wordpress */
 	'TER_ADD_HOME_LINK' => 			false,
 	'TER_ADMIN_BAR' => 				'editor',
@@ -39,6 +40,7 @@ ter_define_constants(array(
 	'TER_TITLE_FORMAT_DEFAULT' => 	false,
 	'TER_MAX_IMAGE_SIZE_KB' => 		1024,
 	'TER_WP_POST_FORMATS' => 		false,
+	'TER_GF_BUTTON_CLASS' =>		'btn btn-info',
 	/* Features */
 	'TER_ACTIVATE_BACK_TO_TOP' => 	false,
 	'TER_ACTIVATE_BRANDING' => 		false,

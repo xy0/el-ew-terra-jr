@@ -4,7 +4,7 @@
 			<div id="footer-top" class="text-center ov-hidden">
 				<p class="text-center pad">This template is set up with hardcoded footer links.<br>Please edit footer.php and modify the links, or uncomment the wp_nav_menu funtion to use the WP Menu System.<br>Name your footer menus Footer 1, Footer 2, etc.</p>
 			</div><!-- /#footer-top -->
-			<div class="container">
+			<div class="container">	
 				<div id="footer-nav-row-1" class="row footer-nav-row">
 					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 1</a><?php //wp_nav_menu(array('menu' => 'Footer 1')) ?></div>
 					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 2</a><?php //wp_nav_menu(array('menu' => 'Footer 2')) ?></div>
@@ -20,11 +20,11 @@
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</footer>
-		<?php ter_nav('standard','footer','navbar-default navbar-static-bottom') ?>
-		<?php ter_back_to_top(1000,500) ?>
-		<?php ter_render_modals() ?>
+		<?php ter_nav('standard','footer','navbar-default navbar-static-bottom') ?>	
+		<?php ter_back_to_top(1000,500) ?>	
 	</div><!-- /#page -->
 </div><!-- /#page-wrap - Opens in header -->
+<?php do_action('ter_footer') ?>
 <?php wp_footer() ?>
 </body>
 </html>
