@@ -16,13 +16,13 @@ ter_define_constants(array(
 
 /* Theme Options - See: https://github.com/hyptx/terra/blob/v3.3.0.4/README.md#theme-config >~~~~~~~> */
 ter_define_constants(array(
-		/* System */
+	/* System */
 	'TER_ERROR_DISPLAY_ON' => 		false,
 	'TER_CDN_URL' => 				'//cdnjs.cloudflare.com/ajax/libs/',
 	'TER_JQUERY_VERSION' => 		'1.9.1',
 	'TER_BOOTSTRAP_VERSION' => 		'3.3.0',
 	'TER_BS_IMG_RESPONSIVE' => 		'#article img,.widget img',
-	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',
+	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',	
 	/* Layout */
 	'TER_LOGO' => 					$ter_dir . '/graphics/logo.png',
 	'TER_HEADER_HOME_LINK' => 		'title',
@@ -41,6 +41,7 @@ ter_define_constants(array(
 	'TER_MAX_IMAGE_SIZE_KB' => 		1024,
 	'TER_WP_POST_FORMATS' => 		false,
 	'TER_GF_BUTTON_CLASS' =>		'btn btn-info',
+	'TER_COPYRIGHT' =>				'&copy; ' . date('Y ') . get_bloginfo('name'),
 	/* Features */
 	'TER_ACTIVATE_BACK_TO_TOP' => 	false,
 	'TER_ACTIVATE_BRANDING' => 		false,
@@ -88,8 +89,8 @@ function ter_admin_favicon(){
 /* Enqueue Parent Theme Styles ~~> */
 function ter_enqueue_parent_theme_styles(){
 	if(is_admin()) return;	
-	wp_enqueue_style('terra_parent',TERRA . 'style.css');
-	wp_enqueue_style('terra',TERRA_CHILD . 'style.css',array('terra_parent'));
+	wp_enqueue_style('ter_styles',TERRA . 'style.css');
+	wp_enqueue_style('ter_child_styles',TERRA_CHILD . 'style.css',array('ter_styles'));
 } 
 
 /* Favicons ~~> */
@@ -103,27 +104,32 @@ function ter_login_styles(){
 	wp_enqueue_style('ter_login_css',TER_CHILD_CSS . 'login.css');
 }
 
+/* <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< Extras >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> */
 
-/* Child Shortcode System - Uncomment to add custom shortcodes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Enqueue Scripts - Uncomment to load js/scripts.js ~~> */
 /*
+function ter_enqueue_child_scripts(){
+	wp_enqueue_script('ter_child_scripts',TER_CHILD_JS . 'scripts.js',array('ter_scripts'));
+}
+add_action('wp_print_scripts','ter_enqueue_child_scripts',101);
+*/
 
+/* Child Shortcode System - Uncomment to add custom shortcodes ~~> */
+/*
 //Shortcode callback
 function ter_gray_box( $atts, $content = null ){ return '<div class="gray-box">' . do_shortcode($content) . '</div>'; }
 add_shortcode('gray-box','ter_gray_box');
 
 //Prevent autop from breaking nested shortcodes by adding it to this array
 $ter_child_shortcodes_for_filter = array('gray-box');
-
 */
 
-/* Child Help - Uncomment to add custom theme help ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Child Help - Uncomment to add custom theme help ~~> */
 /*
-
 //Custom Shortcode section
 $ter_child_shortcodes = array('[gray-box]' => 'A gray box with rounded corners');
 
 //Main section
 $ter_child_help = array('Help Section Title' => '<p>This is a paragraph of help text</p>','Help Section Title 2' => '<p>This is a paragraph of help text 2</p>');
-
 */
 ?>
