@@ -1,27 +1,19 @@
-<?php
-/* ~~~~~~~~~~~~~~~~~~ Basic Usage Example - Subclass ~~~~~~~~~~~~~~~~~~ */
+<?php /* <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< TerCustomPostType - Do not edit >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> */
 
+/* Basic Usage Example - Subclass >~~~~> */
 /*
-$namespace = 'myposttype';
-${$namespace . '_config'} = array(
-	'post_type' => 'myposttype',
-	'name_singular' => 'Myposttype',
-	'name_plural' => 'Myposttypes',
-	'icon' => TER_CHILD_GRAPHICS . 'admin-iconfile.png'
-);
+$skeleton = new Skeleton('skeleton',array('post_type' => 'skeleton','name_singular' => 'Skeleton','name_plural' => 'Skeletons','icon' => TER_CHILD_GRAPHICS . 'favicon-16x16.png'));
 
-class MyPostType extends TerCustomPostType{
+class Skeleton extends TerCustomPostType{
 	public function __construct($namespace,$config){
 		 parent::__construct($namespace,$config);
 		 $this->register_taxonomy(); //Optional, creates namespaced taxonomy. Pass argument true to make hierarchal
 		 $this->setup_meta_boxes(); //Optional, creates meta boxes, overwrite methods in your subclass
 	}
 	//Subclass Methods and Overwrites
-	
+	//Overwriting the init function is helpful if you need to change setup options.
 }
 */
-
-/* ~~~~~~~~~~~~~~~~~~ TerCustomPostType ~~~~~~~~~~~~~~~~~~ */
 
 class TerCustomPostType{
 	protected $_hyp_ns,$_config,$_post_type,$_singular,$_singular_lower,$_plural,$_plural_lower;
@@ -33,13 +25,11 @@ class TerCustomPostType{
 		$this->_singular_lower = strtolower($this->_singular);
 		$this->_plural = $config['name_plural'];
 		$this->_plural_lower = strtolower($this->_plural);
-		//Init
 		add_action('init',array(&$this,'init'));
 		add_filter('post_updated_messages',array(&$this,'updated_messages'));		
 	}
 	
 	public function init(){		
-		//Post Type
 		$labels = array(
 			'name' => 				_x($this->_plural,'post type general name','terra'),
 			'singular_name' => 		_x($this->_singular,'post type singular name','terra'),
@@ -205,25 +195,4 @@ class TerCustomPostType{
 		}
 	}	
 }//END TerCustomPostType
-
-/* ~~~~~~~~~~~~~~~~~~ Basic Usage Example - Subclass ~~~~~~~~~~~~~~~~~~ */
-/*
-$namespace = 'testposttype';
-${$namespace . '_config'} = array(
-	'post_type' => 'testposttype',
-	'name_singular' => 'Testposttype',
-	'name_plural' => 'Testposttypes',
-	'icon' => TER_CHILD_GRAPHICS . 'icon-atrain.gif'
-);
-$test_post_type = new TestPostType($namespace,${$namespace . '_config'});
-
-class TestPostType extends TerCustomPostType{
-	public function __construct($namespace,$config){
-		 parent::__construct($namespace,$config);
-		 //$this->register_taxonomy(); //Optional, creates namespaced taxonomy. Pass argument true to make hierarchal
-		 //$this->setup_meta_boxes(); //Optional, creates meta boxes, overwrite methods in your subclass
-	}
-	//Subclass Methods and Overwrites
-}
-*/
 ?>
