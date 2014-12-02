@@ -9,8 +9,8 @@ $ter_dir = get_bloginfo('stylesheet_directory');//Child theme is always 'stylesh
 ter_define_constants(array(
 	'TERRA_CHILD' => 		$ter_dir . '/',
 	'TER_CHILD_CSS' => 		$ter_dir . '/css/',
-	'TER_CHILD_CUSTOM_PT' =>dirname(__FILE__) . '/custom-post-types/',
 	'TER_CHILD_GRAPHICS' => $ter_dir . '/graphics/',
+	'TER_CHILD_INCLUDES' =>dirname(__FILE__) . '/includes/',
 	'TER_CHILD_JS' => 		$ter_dir . '/js/'
 ));
 
@@ -83,8 +83,8 @@ function ter_admin_favicon(){
 	echo '<link rel="shortcut icon" href="' . TER_CHILD_GRAPHICS . 'favicon-32x32.png">';
 }
 
-/* Enqueue Parent Theme Styles ~~> */
-function ter_enqueue_parent_theme_styles(){
+/* Enqueue Styles ~~> */
+function ter_enqueue_styles(){
 	if(is_admin()) return;	
 	wp_enqueue_style('ter_styles',TERRA . 'style.css');
 	wp_enqueue_style('ter_child_styles',TERRA_CHILD . 'style.css',array('ter_styles'));
@@ -104,15 +104,12 @@ function ter_login_styles(){
 /* <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< Extras >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> */
 
 /* Custom Post Types - Uncomment to start creating easy CTP's ~~~~> */
-
 /*
-require(TER_CHILD_CUSTOM_PT . 'custom-post-type.php');//Load Parent Class
-require(TER_CHILD_CUSTOM_PT . 'skeleton.php');//Load a starter skeleton CPT
+require(TER_CHILD_INCLUDES . 'custom-post-type.php');//Load Parent Class
+require(TER_CHILD_INCLUDES . 'custom-post-type-skeleton.php');//Load a starter skeleton CPT
 */
 
-
 /* Enqueue Scripts - Uncomment to load js/scripts.js ~~~~> */
-
 /*
 function ter_enqueue_child_scripts(){
 	wp_enqueue_script('ter_child_scripts',TER_CHILD_JS . 'scripts.js',array('ter_scripts'));
@@ -120,9 +117,7 @@ function ter_enqueue_child_scripts(){
 add_action('wp_print_scripts','ter_enqueue_child_scripts',101);
 */
 
-
 /* Child Shortcode System - Uncomment to add custom shortcodes ~~~~> */
-
 /*
 //Shortcode callback
 function ter_gray_box( $atts, $content = null ){ return '<div class="gray-box">' . do_shortcode($content) . '</div>'; }
@@ -132,9 +127,7 @@ add_shortcode('gray-box','ter_gray_box');
 $ter_child_shortcodes_for_filter = array('gray-box');
 */
 
-
 /* Child Help - Uncomment to add custom theme help ~~~~> */
-
 /*
 //Custom Shortcode section
 $ter_child_shortcodes = array('[gray-box]' => 'A gray box with rounded corners');
