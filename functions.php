@@ -103,6 +103,11 @@ function ter_login_styles(){
 
 /* <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< Extras >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~> */
 
+/* Extra Includes - Uncomment to start including files ~~~~> */
+/*
+require(TER_CHILD_INCLUDES . 'functions-custom.php');
+*/
+
 /* Custom Post Types - Uncomment to start creating easy CTP's ~~~~> */
 /*
 require(TER_CHILD_INCLUDES . 'custom-post-type.php');//Load Parent Class
