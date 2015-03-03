@@ -45,6 +45,7 @@ ter_define_constants(array(
 	/* Features */
 	'TER_ACTIVATE_BACK_TO_TOP' => 	false,
 	'TER_ACTIVATE_BRANDING' => 		false,
+	'TER_ACTIVATE_CUSTOM_SIDEBAR' =>false,
 	'TER_ACTIVATE_FAVICONS' => 		false,
 	'TER_ACTIVATE_SITE_MOVED' => 	false,
 	'TER_ACTIVATE_SSL' => 			false,
