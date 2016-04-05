@@ -58,7 +58,7 @@ ter_define_constants(array(
 
 /* Enqueue Styles - Load theme css ~~> */
 function ter_enqueue_styles(){
-	if(is_admin()) return;	
+	if(is_admin() && !is_404()) return;	
 	wp_enqueue_style('ter_styles',TERRA . 'style.css');
 	wp_enqueue_style('ter_child_styles',TERRA_CHILD . 'style.css',array('ter_styles'));
 } 
