@@ -33,4 +33,9 @@ $ter_child_shortcodes = array('[gray-box]' => 'A gray box with rounded corners')
 //Main section
 $ter_child_help = array('Help Section Title' => '<p>This is a paragraph of help text</p>','Help Section Title 2' => '<p>This is a paragraph of help text 2</p>');
 */
+
+ // Remove autoP
+//
+remove_filter('the_content', 'wpautop');
+
 ?>

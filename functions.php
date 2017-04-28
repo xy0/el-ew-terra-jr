@@ -25,7 +25,7 @@ ter_define_constants(array(
 	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',	
 	/* Layout */
 	'TER_LOGO' => 					$ter_dir . '/graphics/logo.png',
-	'TER_HEADER_HOME_LINK' => 		'title',
+	'TER_HEADER_HOME_LINK' => 		'logo',
 	'TER_FULL_WIDTH_CLASS' => 		'col-sm-12',
 	'TER_PRIMARY_CLASS' => 			'col-sm-8',
 	'TER_SECONDARY_CLASS' => 		'col-sm-4',

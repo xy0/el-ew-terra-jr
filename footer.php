@@ -1,23 +1,66 @@
 		<?php ter_branding() ?>
 		<?php ter_cta_sidebar(2000,500) ?>
 		<footer id="colophon" role="contentinfo" class="home-footer">
-			<div id="footer-top" class="text-center ov-hidden">
-				<p class="text-center pad">This template is set up with hardcoded footer links.<br>Please edit footer.php and modify the links, or uncomment the wp_nav_menu funtion to use the WP Menu System.<br>Name your footer menus Footer 1, Footer 2, etc.</p>
-			</div><!-- /#footer-top -->
 			<div class="container">	
-				<div id="footer-nav-row-1" class="row footer-nav-row">
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 1</a><?php //wp_nav_menu(array('menu' => 'Footer 1')) ?></div>
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 2</a><?php //wp_nav_menu(array('menu' => 'Footer 2')) ?></div>
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 3</a><?php //wp_nav_menu(array('menu' => 'Footer 3')) ?></div>
-				</div><!-- /.row -->
-				<div id="footer-nav-row-2" class="row footer-nav-row">
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 4</a><?php //wp_nav_menu(array('menu' => 'Footer 4')) ?></div>
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 5</a><?php //wp_nav_menu(array('menu' => 'Footer 5')) ?></div>
-					<div class="col-xs-12 col-sm-4 footer-nav-col"><a href="#">Footer 6</a><?php //wp_nav_menu(array('menu' => 'Footer 6')) ?></div>
-				</div><!-- /.row -->
-				<div class="row">
-					<div class="col-md-12"><div id="copyright"><?php echo TER_COPYRIGHT ?></div></div>
-				</div><!-- /.row -->
+				<div class="col-xs-12 col-sm-3 footer-nav-col">
+					<div id="footer-nav-row-1" class="row footer-nav-row">
+						<a href="#">Buisness</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Buisness Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Buisness Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Buisness Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Buisness Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Buisness Overview</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 footer-nav-col">
+					<div id="footer-nav-row-1" class="row footer-nav-row">
+						<a href="#">Homes</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Homes Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Homes Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Homes Overview</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Homes Overview</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 footer-nav-col">
+					<div id="footer-nav-row-1" class="row footer-nav-row">
+						<a href="#">Service Providers</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Service Providers Overview</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 footer-nav-col">
+					<div id="footer-nav-row-1" class="row footer-nav-row">
+						<a href="#">Resources</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Why Energy Efficiency?</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Why Energy Efficiency?</a>
+					</div>
+					<div class="row footer-nav-row">
+						<a href="#">Why Energy Efficiency?</a>
+					</div>
+				</div>
 			</div><!-- /.container -->
 		</footer>
 		<?php ter_nav('standard','footer','navbar-default navbar-static-bottom') ?>	
