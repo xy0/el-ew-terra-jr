@@ -171,6 +171,9 @@ Template: terra
 .ew-yellow {
 	background-color: yellow;
 }
+.ew-blue {
+	background-color: lightblue;
+}
 
 .ew-button {
 	font-size:15pt;
@@ -178,4 +181,21 @@ Template: terra
 	padding: .3em 3em;
 	color: white;
 	border-radius: 0;
+}
+
+/*  Slider  */
+.ew-slides {
+	padding:100px 150px 66px 150px;
+	color:white;
+}
+.ew-slide-left {
+	background-color:darkblue;
+	height:400px;
+	text-align: left;
+}
+.ew-slide-right {
+	background-color:darkblue;
+	height:400px;
+	opacity:.7;
+	text-align: left;
 }

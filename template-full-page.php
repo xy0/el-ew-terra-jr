@@ -5,7 +5,12 @@
 	<div id="main-row" class="row">
 		<div id="primary" class="<?php echo TER_FULL_WIDTH_CLASS ?>">
 			<div id="content" role="main">
-				<?php the_post() ?>
+				<?php
+					function ew_enqueue_script() {
+						wp_enqueue_script( '/wp-content/themes/terra-jr/js/jquery.counterup.js' );
+					};
+					the_post() ;
+				?>
 				<?php get_template_part('content','page') ?>
 			</div><!-- /#content -->
 		</div><!-- /#primary -->

@@ -33,4 +33,3 @@
 			</div>
 		</header>
 		<?php ter_nav('standard','primary','navbar-default navbar-static-top',1) ?>
-		<div class="ew-full-width"></div>
