@@ -49,7 +49,7 @@ ter_define_constants(array(
 	'TER_ACTIVATE_FAVICONS' => 		false,
 	'TER_ACTIVATE_SITE_MOVED' => 	false,
 	'TER_ACTIVATE_SSL' => 			false,
-	'TER_ACTIVATE_SLIDER' => 		false,
+	'TER_ACTIVATE_SLIDER' => 		true,
 	'TER_ACTIVATE_WAYPOINTS' => 	false,	
 	/* Experimental */
 	'TER_ACTIVATE_SKROLLR' => 		false

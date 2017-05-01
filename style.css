@@ -89,3 +89,93 @@ Template: terra
 @media (max-width: 479px){
 
 }
+
+
+/*                                             */
+/*  Custom modifications for Efficiency Works  */
+/*											   */
+.navbar-nav {
+	float:right;
+}
+
+/*  4 panel square span  */
+.ew-squares {
+	position:relative;
+	min-width:400px;
+}
+.ew-squares .square:hover {
+	background-color: #CCCCCC;
+}
+.ew-squares .square {
+    float:left;
+    position: relative;
+    width: 25%;
+    padding-bottom : 25%;
+    margin:0;
+    overflow:hidden;
+}
+.ew-squares .content {
+    position:absolute;
+    height:100%;
+    width:100%;
+    padding: 5%;
+}
+.ew-squares .table{
+    display:table;
+    width:100%;
+    height:100%;
+}
+.ew-squares .table-cell{
+    display:table-cell;
+    vertical-align:middle;
+}
+.ew-squares ul{
+    text-align:left;
+    margin:5% 0 0;
+    padding:0;
+    list-style-position:inside;
+}
+.ew-squares li{
+    margin: 0 0 0 5%;
+    padding:0;
+}
+.ew-squares .content .rs{
+    width:auto;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+}
+.ew-squares .text{
+	width:100%;
+	padding:1em;
+	background-color: lightblue;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*  fast facts with numbers  */
+.ew-stats{
+	background-color:lightblue;
+	font-weight: bold;
+}
+.ew-stats .number{
+	width:100%;
+	font-size:58pt;
+	text-align: center;
+}
+.ew-stats .description{
+	width:100%;
+	text-align: center;
+}
+
+.ew-yellow {
+	background-color: yellow;
+}
+
+.ew-button {
+	font-size:15pt;
+	font-weight: bold;
+	padding: .3em 3em;
+	color: white;
+	border-radius: 0;
+}
