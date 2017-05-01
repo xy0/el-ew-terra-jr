@@ -227,3 +227,13 @@ Template: terra
 #colophon a:hover{
 	color:grey;
 }
+
+/*  menu  */
+
+.ter-navbar, .ter-navbar .slide-collapse {
+	background: #00d2ff;
+}
+
+.navbar-default {
+	border:none;
+}
