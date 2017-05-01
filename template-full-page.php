@@ -7,7 +7,7 @@
 			<div id="content" role="main">
 				<?php
 					function ew_enqueue_script() {
-						wp_enqueue_script( '/wp-content/themes/terra-jr/js/jquery.counterup.js' );
+						wp_enqueue_script( 'ew_counter', '/wp-content/themes/terra-jr/js/jquery.counterup.js', false );
 					};
 					the_post() ;
 				?>

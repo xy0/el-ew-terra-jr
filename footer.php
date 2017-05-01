@@ -3,7 +3,7 @@
 		<footer id="colophon" role="contentinfo" class="home-footer">
 			<div class="container">	
 				<div class="col-xs-12 col-sm-3 footer-nav-col">
-					<div id="footer-nav-row-1" class="row footer-nav-row">
+					<div id="footer-nav-row-1" class="row footer-nav-row ew-footer-head">
 						<a href="#">Buisness</a>
 					</div>
 					<div class="row footer-nav-row">
@@ -23,7 +23,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-3 footer-nav-col">
-					<div id="footer-nav-row-1" class="row footer-nav-row">
+					<div id="footer-nav-row-1" class="row footer-nav-row ew-footer-head">
 						<a href="#">Homes</a>
 					</div>
 					<div class="row footer-nav-row">
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-3 footer-nav-col">
-					<div id="footer-nav-row-1" class="row footer-nav-row">
+					<div id="footer-nav-row-1" class="row footer-nav-row ew-footer-head">
 						<a href="#">Service Providers</a>
 					</div>
 					<div class="row footer-nav-row">
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-3 footer-nav-col">
-					<div id="footer-nav-row-1" class="row footer-nav-row">
+					<div id="footer-nav-row-1" class="row footer-nav-row ew-footer-head">
 						<a href="#">Resources</a>
 					</div>
 					<div class="row footer-nav-row">

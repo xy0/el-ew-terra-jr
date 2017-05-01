@@ -7,11 +7,11 @@
 			<div class="col-sm-2 ew-slide-left">
 				<h5> Efficiency Works(tm) </h5>
 				<ul>
-					<li> Estes Park Light and Power </li>
-					<li> Fort Collins Utilities </li>
-					<li> Longmont Power &amp; Communications </li>
-					<li> Loveland Water and Power </li>
-					<li> Platte River Power Authority </li>
+					<li> <a href="">Estes Park Light and Power</a> </li>
+					<li> <a href="">Fort Collins Utilities</a> </li>
+					<li> <a href="">Longmont Power &amp; Communications</a> </li>
+					<li> <a href="">Loveland Water and Power</a> </li>
+					<li> <a href="">Platte River Power Authority</a> </li>
 				</ul>
 			</div>
 			<div class="col-sm-5 ew-slide-right">
@@ -28,25 +28,18 @@
 			</div>
 		</div>
 		<div>
-			<div class="col-sm-2 ew-slide-left">
-				<h5> Efficiency Works(tm) </h5>
-				<ul>
-					<li> Estes Park Light and Power </li>
-					<li> Fort Collins Utilities </li>
-					<li> Longmont Power &amp; Communications </li>
-					<li> Loveland Water and Power </li>
-					<li> Platte River Power Authority </li>
-				</ul>
+			<div class="col-sm-5">
+
 			</div>
 			<div class="col-sm-5 ew-slide-right">
 				<h3>
-					About Us
+					Business
 				</h3>
 				<h1>
-					Serving Northern Colorado
+					Efficiency Works for Business
 				</h1>
 				<p>
-					Providing energy efficiency offerings and rebates through Efficiency Works(tm).
+					We help businesses save money on their energy needs through rebates and assessments.
 				</p>
 			</div>
 		</div>

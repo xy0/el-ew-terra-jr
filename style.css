@@ -191,11 +191,39 @@ Template: terra
 .ew-slide-left {
 	background-color:darkblue;
 	height:400px;
-	text-align: left;
+	text-align: left; 
 }
+.ew-slide-left ul{
+	list-style-type:none; 
+}
+.ew-slide-left ul a{
+	color: lightblue;
+}
+
 .ew-slide-right {
 	background-color:darkblue;
 	height:400px;
 	opacity:.7;
 	text-align: left;
+}
+
+/*  footer  */
+
+.ew-footer-head {
+	font-weight: bold;
+	font-size: 15pt;
+	border-bottom: 3px solid grey;
+	margin-right: 30px;
+}
+
+#colophon {
+	background: darkblue;
+}
+
+#colophon a{
+	color:white;
+}
+
+#colophon a:hover{
+	color:grey;
 }

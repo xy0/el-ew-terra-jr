@@ -37,7 +37,7 @@ $ter_child_help = array('Help Section Title' => '<p>This is a paragraph of help 
  // Remove autoP
 //
 remove_filter('the_content', 'wpautop');
-add_action( 'jquery', 'ew_enqueue_script' );
+add_action( 'ew_counter', 'ew_enqueue_script' );
 
 
 ?>
