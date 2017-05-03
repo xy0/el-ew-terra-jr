@@ -6,7 +6,7 @@
 	            <div class="table-cell">
 	                <img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg"/>
 	                <div class="text">
-	                	Buisness
+	                	Buisness <i class='fa fa-caret-right'></i>
 	                </div>
 	            </div>
 	        </div>
@@ -18,7 +18,7 @@
 	            <div class="table-cell">
 	                <img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg"/>
 	                <div class="text">
-	                	Homes
+	                	Homes <i class='fa fa-caret-right'></i>
 	                </div>
 	            </div>
 	        </div>
@@ -30,7 +30,7 @@
 	            <div class="table-cell">
 	                <img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg"/>
 	                <div class="text">
-	                	Service Providers
+	                	Service Providers <i class='fa fa-caret-right'></i>
 	                </div>
 	            </div>
 	        </div>
@@ -42,7 +42,7 @@
 	            <div class="table-cell">
 	                <img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg"/>
 	                <div class="text">
-	                	Efficiency Resources
+	                	Efficiency Resources <i class='fa fa-caret-right'></i>
 	                </div>
 	            </div>
 	        </div>

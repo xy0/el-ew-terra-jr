@@ -24,7 +24,7 @@ ter_define_constants(array(
 	'TER_BS_IMG_RESPONSIVE' => 		'article img,.widget img',
 	'TER_GOOGLE_FONT' => 			'Open+Sans:400,400italic,600,600italic',	
 	/* Layout */
-	'TER_LOGO' => 					$ter_dir . '/graphics/logo.png',
+	'TER_LOGO' => 					'/wp-content/uploads/2017/05/352e2ew.png',
 	'TER_HEADER_HOME_LINK' => 		'logo',
 	'TER_FULL_WIDTH_CLASS' => 		'col-sm-12',
 	'TER_PRIMARY_CLASS' => 			'col-sm-8',
@@ -50,7 +50,7 @@ ter_define_constants(array(
 	'TER_ACTIVATE_SITE_MOVED' => 	false,
 	'TER_ACTIVATE_SSL' => 			false,
 	'TER_ACTIVATE_SLIDER' => 		true,
-	'TER_ACTIVATE_WAYPOINTS' => 	false,	
+	'TER_ACTIVATE_WAYPOINTS' => 	true,	
 	/* Experimental */
 	'TER_ACTIVATE_SKROLLR' => 		false
 ));

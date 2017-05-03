@@ -36,8 +36,15 @@ $ter_child_help = array('Help Section Title' => '<p>This is a paragraph of help 
 
  // Remove autoP
 //
-remove_filter('the_content', 'wpautop');
+#remove_filter('the_content', 'wpautop');
+
+ // Add enqueue script action
+//
 add_action( 'ew_counter', 'ew_enqueue_script' );
 
+ // Add Font-Awesome icon CSS
+//
+wp_enqueue_style( 'font-awesome', '/wp-content/themes/terra-jr/lib/font-awesome-4.7.0/css/font-awesome.min.css');
 
+wp_enqueue_script( 'ew_counter', '/wp-content/themes/terra-jr/js/jquery.counterup.js', array('ter_waypoints') );
 ?>
